@@ -1,0 +1,33 @@
+<!-- Exercise in Lesson 04 - e -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buttons</title>
+
+    <!-- CSS for styling -->
+    <style>
+      .btn-add-to-cart {
+        background-color: yellow;
+      }
+      .btn-buy-now {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Adult's Plain Cotton T-Shirt</p>
+    <p>Price: $7.99</p>
+    <button class="btn-add-to-cart" onclick="alert('Added');">
+      Add to cart
+    </button>
+    <button
+      class="btn-buy-now"
+      onclick="console.log('Loading...'); alert('Purchased');"
+    >
+      Buy now
+    </button>
+  </body>
+</html>
