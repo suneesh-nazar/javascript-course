@@ -1,0 +1,25 @@
+<!-- Exercise for Lesson 08 - d -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Products</title>
+  </head>
+  <body>
+    <script>
+      function compareProducts(product1, product2) {
+        if (product1.price < product2.price) {
+          return product1;
+        }
+        return product2;
+      }
+
+      const itemBasketBall = { name: "basketball", price: 2095 };
+      const itemSocks = { name: "socks", price: 1090 };
+
+      console.log(compareProducts(itemBasketBall, itemSocks));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+<!-- Practice for Lesson 08 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+      // Defining the object. Objects are created inside curley brackets. Inside the curley brackets provide the property-value pair seperated by colon. Multiple properties are seperated by a comma.
+      const product = { name: "socks", price: 1090 };
+
+      // Accessing the values in an object using Dot-notation
+      console.log(typeof product);
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      // Modifying the value of a property in an object
+      product.name = "cotton socks";
+      console.log(product);
+
+      // Adding a new property to an object
+      product.newProperty = true;
+      console.log(product);
+
+      // Deleting a property from an object
+      delete product.newProperty;
+      console.log(product);
+      */
+
+      /*
+      // the symbol - is considered as a subtraction and will throw error. But bracket notation solves this problem.
+      // rating is a nested object, which is an object inside an object.
+      // Functions inside an object - Methods
+      const product2 = {
+        name: "shirt",
+        ["delivery-time"]: "1 day",
+        rating: { stars: 4.5, count: 87 },
+        fun: function function1(variable1) {
+          console.log("function inside an object");
+          console.log(`My name is ${variable1}`);
+        },
+      };
+      console.log(product2);
+
+      console.log(product2.name); //Dot Notation
+      console.log(product2["name"]); // Bracket Notation
+      console.log(product2["delivery-time"]); // Using the Dot notation, the symbol - is considered as a subtraction and will throw error. But bracket notation solves this problem.
+
+      console.log(product2.rating.stars);
+      console.log(product2["rating"].count);
+      console.log(product2.rating["stars"]);
+
+      // Calling (function inside an object = Method)
+      product2.fun("Rishan");
+
+      console.log(typeof console); // console is an object.
+      console.log(typeof console.log); //log is a function inside the object console.
+
+      // JSON stands for "JavaScript Object Notation". It sis syntax similar to JavaScript but with less features. JSON doesn't support functions as well as single quotes, uses double quotes instead.
+
+      // JSON syntax can be understood by almost all programming languages while JavaScript syntax is only for JavaScript. JSON is more universal. Use JSON when we send data between computers (Client-Server etc) and to store data.
+
+      // A built-in JSON object helps us to convert JavaScript objects to JSON objects using the stringify. The result it gives is a string.
+      console.log(JSON.stringify(product2));
+
+      // JSON.parse will convert the JSON string into a JavaScript object
+      const jsonString = JSON.stringify(product2);
+      const product3 = JSON.parse(jsonString);
+      console.log(product3);
+      */
+
+      // Objects are not stored as it is, the properties and values  are saved and the object is just a reference to those properties and values.
+      const object1 = { message: "hello" };
+      console.log(object1);
+      const object2 = object1;
+      console.log(object2);
+      object2.message = "Good job!";
+      console.log(object1);
+
+      const object3 = { message: "Good job!" };
+      console.log(object3 === object1); //Gives false because it is comparing reference not the values inside
+      console.log(object2 === object1); // Gives true because object2 points to the same reference as object1 because of the statement object2 = object1
+
+      const object4 = { message: "Good job!", price: 799 };
+      //const message = object4.message; // assigns the value of property 'message' to constant 'message'
+      const { message, price } = object4; // takes out the two values from the object and assigns to "message" and "price" constants. (Shortcut called destructuring)
+      console.log(message);
+      console.log(price);
+
+      const object5 = {
+        message,
+        // method: function function1() {
+        //   console.log("method");
+        // } // This can be written as a Shorthand method as given below.
+        method() {
+          console.log("method");
+        },
+      }; //This is same as "message: message" - Shorthand property
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>

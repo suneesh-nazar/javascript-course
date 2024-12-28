@@ -1,0 +1,28 @@
+<!-- Exercise for Lesson 08 - e -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Products</title>
+  </head>
+  <body>
+    <script>
+      function IsSameProduct(product1, product2) {
+        return (
+          product1.name === product2.name && product1.price === product2.price
+        );
+      }
+
+      const productBasketBall = { name: "basketball", price: 2095 };
+      const productSocks = { name: "socks", price: 1090 };
+      const product3 = { name: "basketball", price: 2095 };
+
+      console.log(IsSameProduct(product3, productSocks));
+      console.log(IsSameProduct(product3, productBasketBall));
+      console.log(IsSameProduct(productBasketBall, productSocks));
+      console.log(IsSameProduct(product3, product3));
+    </script>
+  </body>
+</html>
