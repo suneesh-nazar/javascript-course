@@ -10,11 +10,10 @@
   <body>
     <script>
       const randomNumber = Math.random();
-      let result = randomNumber <= 0.5 ? "heads" : "tails";
+      let result = randomNumber < 0.5 ? "heads" : "tails";
       console.log(result);
-      myGuess = "tails";
-      finalResult = result === myGuess ? "You win!" : "You lose!";
-      console.log(finalResult);
+      myGuess = "heads";
+      console.log(myGuess === result ? "You win!" : "You lose!");
     </script>
   </body>
 </html>
