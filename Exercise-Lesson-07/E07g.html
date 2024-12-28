@@ -1,0 +1,54 @@
+<!-- Exercise for Lesson-07 - g - two units-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Length Conversion</title>
+  </head>
+  <body>
+    <script>
+      // Function to convert distance to given units
+      function convertLength(distance, fromUnit, toUnit) {
+        if (
+          !distance ||
+          !(typeof distance === "number") ||
+          !fromUnit ||
+          !toUnit ||
+          (fromUnit !== "km" && fromUnit !== "miles")
+        ) {
+          return "Invalid parameters!";
+        }
+
+        let convertedLength = "";
+        if (fromUnit === toUnit) {
+          convertedLength = `${distance} ${toUnit}`;
+        } else {
+          if (fromUnit === "miles" && toUnit === "km") {
+            convertedLength = `${distance * 1.6} ${toUnit}`;
+          } else if (fromUnit === "km" && toUnit === "miles") {
+            convertedLength = `${distance / 1.6} ${toUnit}`;
+          } else {
+            convertedLength = "Invalid parameters!";
+          }
+        }
+
+        return convertedLength;
+      }
+
+      console.log(convertLength(50, "miles", "km"));
+      console.log(convertLength(32, "km", "miles"));
+      console.log(convertLength(50, "km", "km"));
+      console.log(convertLength(32, "miles", "miles"));
+
+      console.log(convertLength(50));
+      console.log(convertLength(50, "km"));
+      console.log(convertLength(50, "miles"));
+      console.log(convertLength("km", "km"));
+      console.log(convertLength(50, "k", "km"));
+      console.log(convertLength(50, "km", "k"));
+      console.log(convertLength(50, "lbs", "lbs"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!-- Exercise for Lesson-07 - e -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farenheit to Celcius</title>
+  </head>
+  <body>
+    <script>
+      // Function to convert Celcius to Farenheit
+      function convertToCelcius(farenheit) {
+        let celcius = 0;
+
+        if (!farenheit || !(typeof farenheit === "number")) {
+          celcius = "Not a good parameter!";
+        } else {
+          celcius = ((farenheit - 32) * 5) / 9;
+        }
+
+        return celcius;
+      }
+
+      let celcius = convertToCelcius(86);
+      console.log(celcius);
+      celcius = convertToCelcius();
+      console.log(celcius);
+      celcius = convertToCelcius("86");
+      console.log(celcius);
+    </script>
+  </body>
+</html>
