@@ -1,0 +1,26 @@
+<!-- Exercise for Lesson 09 - h -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercise-9h</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="Type something"
+      class="js-input"
+      onkeyup="handleTextInputKeyup()"
+    />
+    <p class="js-text"></p>
+
+    <script>
+      function handleTextInputKeyup() {
+        const inputElement = document.querySelector(".js-input");
+        document.querySelector(".js-text").innerHTML = inputElement.value;
+      }
+    </script>
+  </body>
+</html>

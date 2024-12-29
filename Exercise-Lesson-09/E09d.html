@@ -1,0 +1,24 @@
+<!-- Exercise for Lesson 09 - d -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercise-9d</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Name" class="js-inputName" />
+    <button onclick="showName();">Submit</button>
+    <p class="js-showText"></p>
+
+    <script>
+      function showName() {
+        const text = document.querySelector(".js-inputName").value;
+        document.querySelector(
+          ".js-showText"
+        ).innerHTML = `Your name is: ${text}`;
+      }
+    </script>
+  </body>
+</html>

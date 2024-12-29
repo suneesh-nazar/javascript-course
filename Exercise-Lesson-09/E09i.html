@@ -1,0 +1,54 @@
+<!-- Exercise for Lesson 09 - j -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <button onclick="updateCartQuantity('S')">Show Quantity</button>
+    <button onclick="updateCartQuantity(1)">Add to Cart</button>
+    <button onclick="updateCartQuantity(2)">+2</button>
+    <button onclick="updateCartQuantity(3)">+3</button>
+    <button onclick="updateCartQuantity(4)">+4</button>
+    <button onclick="updateCartQuantity(5)">+5</button>
+    <button onclick="updateCartQuantity(-1)">Remove from cart</button>
+    <button onclick="updateCartQuantity(-2)">-2</button>
+    <button onclick="updateCartQuantity(-3)">-3</button>
+    <button onclick="updateCartQuantity('C')">Reset Cart</button>
+
+    <p class="js-cart-quantity"></p>
+
+    <script>
+      let cartQuantity = 0;
+      displayCartQuantity();
+
+      function updateCartQuantity(quantity) {
+        if (quantity !== "S") {
+          if (cartQuantity + quantity > 10) {
+            alert("The cart is full");
+            return;
+          } else if (cartQuantity + quantity < 0) {
+            alert("Not enough items in the cart");
+            return;
+          } else if (quantity === "C") {
+            cartQuantity = 0;
+            console.log("Cart was reset.");
+          } else {
+            cartQuantity += quantity;
+          }
+        }
+
+        displayCartQuantity();
+      }
+
+      function displayCartQuantity() {
+        document.querySelector(
+          ".js-cart-quantity"
+        ).innerHTML = `Cart Quantity: ${cartQuantity}`;
+      }
+    </script>
+  </body>
+</html>
