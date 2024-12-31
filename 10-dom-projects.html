@@ -1,0 +1,38 @@
+<!-- Practice for Lesson 10 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM with CSS</title>
+
+    <!-- Link the CSS -->
+    <link rel="stylesheet" href="/styles/10-styles-dom-projects.css" />
+  </head>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button onclick="subscribe();" class="js-subscribe-button subscibe-button">
+      Subscribe
+    </button>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input
+      type="text"
+      placeholder="Cost of order"
+      class="js-cost-input cost-input"
+      onkeydown="handleCostInputKeydown(event)"
+    />
+    <button onclick="calculateTotal();" class="calculate-button">
+      Calculate
+    </button>
+    <p class="js-total-cost total-cost"></p>
+
+    <p>Rock Paper Scissors</p>
+    <a href="/10-rock-paper-scissors.html">Click here</a>
+    
+    <script src="js/10-dom-projects.js"></script>
+  </body>
+</html>

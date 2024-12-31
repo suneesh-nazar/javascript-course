@@ -1,0 +1,126 @@
+/* CSS for styling exercises in Lesson 10 */
+
+/* 10a */
+.add-to-cart {
+  border: none;
+  background-color: rgb(255, 216, 20);
+  font-size: 20px;
+  margin: 20px;
+  padding: 10px 70px;
+  border-radius: 35px;
+}
+
+/* 10b */
+.request-now {
+  background-color: black;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 7px;
+  margin: 10px;
+}
+
+.schedule-later {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 15px 25px;
+  border-radius: 7px;
+  margin: 10px;
+}
+
+/* 10d */
+
+.toggle-button {
+  background-color: rgb(230, 230, 230);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 15px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.is-toggled {
+  background-color: black;
+  color: white;
+}
+
+/* 10h - DOM with CSS============================= */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.subscibe-button {
+  border: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+
+.is-subscribed {
+  background-color: rgb(240, 240, 240);
+  color: black;
+}
+
+.cost-input {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.calculate-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.total-cost {
+  margin-bottom: 55px;
+}
+
+.cost-error {
+  color: red;
+}
+
+/* 10i-10j - Calculator */
+
+.calculation {
+  color: white;
+  font-size: 45px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.calculator-button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 60px;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.gray-button {
+  background-color: rgb(51, 51, 51);
+}
+
+.orange-button {
+  background-color: rgb(254, 160, 10);
+}
+
+.clear-button {
+  font-size: 17px;
+}

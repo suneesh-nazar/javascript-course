@@ -1,0 +1,39 @@
+/* Styling sheet for Lesson 10 */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.subscibe-button {
+  border: none;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  padding: 10px 15px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 35px;
+}
+
+.is-subscribed {
+  background-color: rgb(240, 240, 240);
+  color: black;
+}
+
+.cost-input {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.calculate-button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 12px 15px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.total-cost {
+  margin-bottom: 55px;
+}

@@ -1,0 +1,140 @@
+<!-- Exercise for Lesson 10 - i-j -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10 Calculator</title>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="styles-E10.css" />
+    <style>
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="js-calculation calculation"></p>
+    <p>
+      <button
+        onclick="updateCalculation('1');"
+        class="calculator-button gray-button"
+      >
+        1
+      </button>
+      <button
+        onclick="updateCalculation('2');"
+        class="calculator-button gray-button"
+      >
+        2
+      </button>
+      <button
+        onclick="updateCalculation('3');"
+        class="calculator-button gray-button"
+      >
+        3
+      </button>
+      <button
+        onclick="updateCalculation(' + ');"
+        class="calculator-button orange-button"
+      >
+        +
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="updateCalculation('4');"
+        class="calculator-button gray-button"
+      >
+        4
+      </button>
+      <button
+        onclick="updateCalculation('5');"
+        class="calculator-button gray-button"
+      >
+        5
+      </button>
+      <button
+        onclick="updateCalculation('6');"
+        class="calculator-button gray-button"
+      >
+        6
+      </button>
+      <button
+        onclick="updateCalculation(' - ');"
+        class="calculator-button orange-button"
+      >
+        -
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="updateCalculation('7');"
+        class="calculator-button gray-button"
+      >
+        7
+      </button>
+      <button
+        onclick="updateCalculation('8');"
+        class="calculator-button gray-button"
+      >
+        8
+      </button>
+      <button
+        onclick="updateCalculation('9');"
+        class="calculator-button gray-button"
+      >
+        9
+      </button>
+      <button
+        onclick="updateCalculation(' * ');"
+        class="calculator-button orange-button"
+      >
+        *
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="updateCalculation('0');"
+        class="calculator-button gray-button"
+      >
+        0
+      </button>
+      <button
+        onclick="updateCalculation('.');"
+        class="calculator-button gray-button"
+      >
+        .
+      </button>
+      <button
+        onclick="updateCalculation('=');"
+        class="calculator-button gray-button"
+      >
+        =
+      </button>
+      <button
+        onclick="updateCalculation(' / ');"
+        class="calculator-button orange-button"
+      >
+        /
+      </button>
+    </p>
+
+    <p>
+      <button
+        onclick="updateCalculation('C')"
+        class="calculator-button gray-button clear-button"
+      >
+        Clear
+      </button>
+      <!-- <button onclick="console.log(calculation)">Show</button> -->
+    </p>
+
+    <script src="script-E10.js"></script>
+  </body>
+</html>
