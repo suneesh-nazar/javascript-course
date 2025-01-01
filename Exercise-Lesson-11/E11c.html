@@ -1,0 +1,37 @@
+<!-- Exercise for Lesson 11 - c -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11c-Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function getLastValue(array) {
+        const arrayLength = array.length;
+        const lastValue = array[arrayLength - 1];
+        return lastValue;
+      }
+
+      function arraySwap(array) {
+        const firstValue = array[0];
+        const lastValue = getLastValue(array);
+
+        array[0] = lastValue;
+        array[array.length - 1] = firstValue;
+        return array;
+      }
+
+      const numberArray = [1, 20, 22, 24, 5];
+      console.log(numberArray);
+      const swapedNumberArray = arraySwap(numberArray);
+      console.log(swapedNumberArray);
+
+      const textArray = ["hi", "hello", "good"];
+      console.log(textArray);
+      const swapedTextArray = arraySwap(textArray);
+      console.log(swapedTextArray);
+    </script>
+  </body>
+</html>

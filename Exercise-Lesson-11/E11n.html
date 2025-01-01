@@ -1,0 +1,32 @@
+<!-- Exercise for Lesson 11 - n -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11n-Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function countWords(words) {
+        const result = {};
+        for (let i = 0; i < words.length; i++) {
+          const word = words[i];
+          if (!result[word]) {
+            result[word] = 1;
+          } else {
+            result[word]++;
+          }
+        }
+        return result;
+      }
+
+      const array = ["apple", "grape", "apple", "apple"];
+      // const numArray = [-2, 3, -5, 7, 10];
+      // const numArray = [];
+      // const numArray = [3];
+
+      console.log(countWords(array));
+    </script>
+  </body>
+</html>

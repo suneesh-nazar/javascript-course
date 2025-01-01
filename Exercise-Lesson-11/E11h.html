@@ -1,0 +1,26 @@
+<!-- Exercise for Lesson 11 - h -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11h-Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function addOne(array) {
+        for (let i = 0; i < array.length; i++) {
+          array[i] += 1;
+        }
+        return array;
+      }
+
+      // const array = [1, 2, 3];
+      const array = [-2, -1, 0, 99];
+      console.log(array);
+
+      const addOneArray = addOne(array);
+      console.log(addOneArray);
+    </script>
+  </body>
+</html>

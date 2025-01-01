@@ -1,0 +1,26 @@
+<!-- Exercise for Lesson 11 - i -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11i-Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function addNum(array, num) {
+        for (let i = 0; i < array.length; i++) {
+          array[i] += num;
+        }
+        return array;
+      }
+
+      // const array = [1, 2, 3];
+      const array = [-2, -1, 0, 99];
+      console.log(array);
+
+      const newArray = addNum(array, 2);
+      console.log(newArray);
+    </script>
+  </body>
+</html>
