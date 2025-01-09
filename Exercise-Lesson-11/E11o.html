@@ -1,0 +1,25 @@
+<!-- Exercise for Lesson 11 - o -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11o-Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      // const array = ["hello", "world", "search", "good"];
+      const array = ["not", "found"];
+
+      let foundIndex = -1;
+      for (let i = 0; i < array.length; i++) {
+        const arrayItem = array[i];
+        if (arrayItem === "search") {
+          foundIndex = i;
+        }
+      }
+
+      console.log(foundIndex);
+    </script>
+  </body>
+</html>

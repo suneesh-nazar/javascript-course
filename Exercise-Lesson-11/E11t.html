@@ -1,0 +1,31 @@
+<!-- Exercise for Lesson 11 - t -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11t-Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function removeEgg(food) {
+        let reversedFood = food.reverse();
+        let newArray = [];
+        let eggsRemoved = 0;
+        for (let i = 0; i < reversedFood.length; i++) {
+          if (reversedFood[i] === "egg" && eggsRemoved < 2) {
+            eggsRemoved++;
+            continue;
+          }
+          newArray.push(reversedFood[i]);
+        }
+        return newArray.reverse();
+      }
+
+      const array = ["egg", "apple", "egg", "egg", "ham"];
+      console.log(array);
+      console.log(removeEgg(array));
+      console.log(array);
+    </script>
+  </body>
+</html>

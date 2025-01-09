@@ -1,0 +1,38 @@
+<!-- Exercise for Lesson 11 - w -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11w-Unique</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(searchArray, searchString) {
+        let foundIndex = -1;
+        for (let i = 0; i < searchArray.length; i++) {
+          const arrayItem = searchArray[i];
+          if (arrayItem === searchString) {
+            foundIndex = i;
+            break;
+          }
+        }
+        return foundIndex;
+      }
+
+      function unique(array) {
+        uniqueArray = [];
+        for (let i = 0; i < array.length; i++) {
+          let arrayItem = array[i];
+          if (findIndex(uniqueArray, arrayItem) === -1) {
+            uniqueArray.push(arrayItem);
+          }
+        }
+        return uniqueArray;
+      }
+      console.log(unique(["green", "red", "blue", "red"]));
+      console.log(unique(["red", "green", "green", "red"]));
+      console.log(unique(["2", "3", "4", "4", "1"]));
+    </script>
+  </body>
+</html>

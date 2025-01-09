@@ -1,6 +1,12 @@
 // Script for Lesson Practice - 11 - Todo List
 
-const todoList = [];
+const todoList = JSON.parse(localStorage.getItem('todoList')) || [{
+  name: 'make dinner',
+  dueDate: '2022-12-22'
+}, {
+  name: 'wash dishes',
+  dueDate: '2022-12-22'
+}];
 
 renderTodoList();
 
@@ -18,6 +24,7 @@ function renderTodoList(){
       <div>${dueDate}</div>
       <button onclick = "
         todoList.splice(${i}, 1);
+        saveToStorage();
         renderTodoList();
       " class = "delete-todo-button">Delete</button>`;
 
@@ -38,5 +45,11 @@ function addTodo(){
   nameInputElement.value = '';
   dateInputElement.value = '';
 
+  saveToStorage();
+
   renderTodoList();
+}
+
+function saveToStorage(){
+  localStorage.setItem('todoList', JSON.stringify(todoList));
 }

@@ -1,0 +1,31 @@
+<!-- Exercise for Lesson 11 - q -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11q-Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function findIndex(searchArray, searchString) {
+        let foundIndex = -1;
+        for (let i = 0; i < searchArray.length; i++) {
+          const arrayItem = searchArray[i];
+          if (arrayItem === searchString) {
+            foundIndex = i;
+            break;
+          }
+        }
+        return foundIndex;
+      }
+
+      // const array = ["hello", "world", "search", "good"];
+      // const array = ["not", "found"];
+      const array = ["hello", "world", "search", "good", "search"];
+      console.log(findIndex(array, "search"));
+      console.log(findIndex(["green", "red", "blue", "red"], "red"));
+      console.log(findIndex(["green", "red", "blue", "red"], "yellow"));
+    </script>
+  </body>
+</html>

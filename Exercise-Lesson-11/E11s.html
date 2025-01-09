@@ -1,0 +1,28 @@
+<!-- Exercise for Lesson 11 - s -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E11s-Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      function removeEgg(food) {
+        let newArray = [];
+        let eggsRemoved = 0;
+        for (let i = 0; i < food.length; i++) {
+          if (food[i] === "egg" && eggsRemoved < 2) {
+            eggsRemoved++;
+            continue;
+          }
+          newArray.push(food[i]);
+        }
+        return newArray;
+      }
+
+      const array = ["egg", "apple", "egg", "egg", "ham"];
+      console.log(removeEgg(array));
+    </script>
+  </body>
+</html>
