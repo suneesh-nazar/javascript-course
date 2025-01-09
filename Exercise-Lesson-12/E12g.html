@@ -1,0 +1,25 @@
+<!-- Exercise for Lesson 12g -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise - 12g</title>
+  </head>
+  <body>
+    <script>
+      console.log(document.title);
+      let isApp = false;
+      setInterval(function () {
+        if (!isApp) {
+          document.title = "App";
+          isApp = true;
+        } else {
+          document.title = "(2) New Messages";
+          isApp = false;
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

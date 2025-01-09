@@ -1,0 +1,86 @@
+<!-- Practice for Lesson 12 -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+
+    <!-- Link the CSS -->
+    <!-- <link rel="stylesheet" href="/styles/11-arrays-and-loops.css" /> -->
+  </head>
+  <body>
+    <script>
+      /*
+      function greeting() {
+        console.log("hello");
+      }
+      greeting();
+
+      const num = 2;
+
+      // In JS functions are values and we can save it in a variable
+      //Anonymous function - a function without name as written below
+      const function1 = function () {
+        console.log("hello2");
+      };
+
+      console.log(function1); //Prints the function greeting()
+      console.log(typeof function1); //Prints "function" as the data type is function
+      function1(); //calling the function1
+
+      const object1 = {
+        num: 2,
+        fun: function () {
+          console.log("hello3");
+        },
+      };
+      object1.fun();
+
+      //passing a value into a function
+      function display(param) {
+        console.log(param);
+      }
+      display(2);
+
+      //passing a function into another function as parameter
+      // Function we are passing in - Callback
+      function run(param) {
+        param();
+      }
+      run(function () {
+        console.log("hello4");
+      });
+      */
+
+      /*
+      //setTimeout built-in function runs the function in the parameter after the defined time period given as the second parameter(milliseconds - 1 sec = 1000 ms)
+      setTimeout(function () {
+        console.log("timeout");
+      }, 3000);
+
+      console.log("next line");
+      //Asynchronous Code - won't wait for a line to finish execution before going to the next line, so here 'next line' will be printed first and then 'timeout'
+      //Synchronous Code - will wait for a line to finish executing before executing the next line.
+
+      //setInterval built-in function runs the function in the parameter in every defined time period given as the second parameter(milliseconds - 1 sec = 1000 ms)
+      setInterval(function () {
+        console.log("interval");
+      }, 3000);
+      console.log("next line 2");
+      //setInterval is also Asynchronous Code.
+      */
+
+      array1 = ["make dinner", "wash dishes", "watch youtube"];
+      array1.forEach(function (value, index) {
+        // Same as continue in "for loop" which skips the iteration for once;
+        if (value === "wash dishes") {
+          return;
+        }
+        console.log(index);
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>

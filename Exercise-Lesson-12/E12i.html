@@ -1,0 +1,54 @@
+<!-- Exercise for Lesson 12i -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 12i</title>
+  </head>
+  <body>
+    <button onclick="addMessage();">Add</button>
+    <button onclick="removeMessage();">Remove</button>
+    <script>
+      let messageCount = 2;
+      let inetrvalId;
+      let notificationDisplaying;
+      displayNotification();
+
+      function displayNotification() {
+        if (notificationDisplaying) {
+          return;
+        }
+
+        inetrvalId = setInterval(function () {
+          if (document.title === "App") {
+            document.title = `(${messageCount}) New Messages`;
+          } else {
+            document.title = "App";
+          }
+        }, 1000);
+
+        notificationDisplaying = true;
+      }
+
+      function stopNotification() {
+        clearInterval(inetrvalId);
+        document.title = "App";
+        notificationDisplaying = false;
+      }
+
+      function addMessage() {
+        messageCount++;
+        displayNotification();
+      }
+
+      function removeMessage() {
+        messageCount--;
+        if (messageCount === 0) {
+          stopNotification();
+        }
+      }
+    </script>
+  </body>
+</html>

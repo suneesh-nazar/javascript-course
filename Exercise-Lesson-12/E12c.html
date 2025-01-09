@@ -1,0 +1,21 @@
+<!-- Exercise for Lesson 12c -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise - 12c</title>
+  </head>
+  <body>
+    <button onclick="changeButtonText();" class="js-start-button">Start</button>
+    <script>
+      function changeButtonText() {
+        setTimeout(function () {
+          const startButtonElement = document.querySelector(".js-start-button");
+          startButtonElement.innerHTML = "Finished!";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>

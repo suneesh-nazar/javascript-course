@@ -1,0 +1,23 @@
+<!-- Exercise for Lesson 12d -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise - 12d</title>
+  </head>
+  <body>
+    <button onclick="changeButtonText();" class="js-start-button">Start</button>
+    <script>
+      function changeButtonText() {
+        const startButtonElement = document.querySelector(".js-start-button");
+        startButtonElement.innerHTML = "Loading...";
+
+        setTimeout(function () {
+          startButtonElement.innerHTML = "Finished!";
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
