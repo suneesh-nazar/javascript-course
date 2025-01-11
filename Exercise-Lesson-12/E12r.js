@@ -10,14 +10,39 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 
 updateScoreElement();
 
+const resetScoreButtonElement = document.querySelector('.js-reset-score-button');
+resetScoreButtonElement.addEventListener('click', () => { showConfirmationMessage(); });
+
 function resetScore() {
   score = { wins: 0, losses: 0, ties: 0 };
   localStorage.removeItem("score");
   updateScoreElement();
 }
 
+function showConfirmationMessage() {
+  const resetConfirmMessageElement = document.querySelector('.js-reset-confirm');
+  resetConfirmMessageElement.innerHTML = `
+    Are you sure you want to reset the score?
+    <button class="js-reset-confirm-yes reset-confirm-button">Yes</button>
+    <button class="js-reset-confirm-no reset-confirm-button">No</button>`;
+
+  const resetConfirmYesElement = document.querySelector('.js-reset-confirm-yes');
+  resetConfirmYesElement.addEventListener('click', () => {
+    resetScore();
+    resetConfirmMessageElement.innerHTML = '';
+  });
+
+  const resetConfirmNoElement = document.querySelector('.js-reset-confirm-no');
+  resetConfirmNoElement.addEventListener('click', () => {
+    resetConfirmMessageElement.innerHTML = '';
+  });
+}
+
 let isAutoPlaying = false;
 let intervalId;
+
+const autoPlayButtonElement = document.querySelector('.js-auto-play');
+autoPlayButtonElement.addEventListener('click', () => { autoPlay(); });
 
 function autoPlay(){
   if(!isAutoPlaying){
@@ -26,7 +51,7 @@ function autoPlay(){
       playGame(playerMove);
     }, 1000);
     isAutoPlaying = true;
-    document.querySelector('.js-auto-play').innerHTML = 'Stop Play';
+    document.querySelector('.js-auto-play').innerHTML = 'Stop Playing';
   } else {
     clearInterval(intervalId);
     isAutoPlaying = false;
@@ -51,6 +76,10 @@ bodyElement.addEventListener('keydown', (event) => {
     playGame('paper');
   } else if (event.key === 's') {
     playGame('scissors');
+  } else if (event.key === 'a') {
+    autoPlay();
+  } else if (event.key === 'Backspace') {
+    showConfirmationMessage();
   }
 });
 

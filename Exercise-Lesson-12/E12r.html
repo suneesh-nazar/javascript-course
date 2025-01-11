@@ -1,12 +1,14 @@
+<!-- Exercise for Lesson 12 r-x - Rock-Paper-Scissors -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>12-Rock Paper Scissors</title>
+    <title>E12r-Rock Paper Scissors</title>
 
     <!-- Link the CSS -->
-    <link rel="stylesheet" href="/styles/12-styles-rock-paper-scissors.css" />
+    <link rel="stylesheet" href="E12r.css" />
   </head>
   <body>
     <p class="title">Rock Paper Scissors</p>
@@ -23,13 +25,13 @@
     <p class="js-result result"></p>
     <p class="js-moves moves"></p>
     <p class="js-score score"></p>
-    <button onclick="resetScore();" class="reset-score-button">
+    <button class="reset-score-button js-reset-score-button">
       Reset Score
     </button>
-    <button onclick="autoPlay();" class="auto-play-button js-auto-play">
-      Auto Play
-    </button>
+    <button class="auto-play-button js-auto-play">Auto Play</button>
 
-    <script src="js/12-rock-paper-scissors.js"></script>
+    <p class="js-reset-confirm"></p>
+
+    <script src="E12r.js"></script>
   </body>
 </html>

@@ -8,14 +8,14 @@
     <title>Exercise - 12c</title>
   </head>
   <body>
-    <button onclick="changeButtonText();" class="js-start-button">Start</button>
+    <button class="js-start-button">Start</button>
     <script>
-      function changeButtonText() {
-        setTimeout(function () {
-          const startButtonElement = document.querySelector(".js-start-button");
+      const startButtonElement = document.querySelector(".js-start-button");
+      startButtonElement.addEventListener("click", () => {
+        setTimeout(() => {
           startButtonElement.innerHTML = "Finished!";
         }, 1000);
-      }
+      });
     </script>
   </body>
 </html>

@@ -8,20 +8,22 @@
     <title>Exercise - 12h</title>
   </head>
   <body>
-    <button onclick="messageCount++;">Add</button>
-    <button onclick="messageCount--;">Remove</button>
+    <button class="js-add-button">Add</button>
+    <button class="js-remove-button">Remove</button>
     <script>
-      console.log(document.title);
+      document.querySelector(".js-add-button").addEventListener("click", () => {
+        messageCount++;
+      });
+      document
+        .querySelector(".js-remove-button")
+        .addEventListener("click", () => {
+          messageCount--;
+        });
+
       let messageCount = 2;
-      let isApp = false;
-      setInterval(function () {
-        if (!isApp) {
-          document.title = "App";
-          isApp = true;
-        } else {
-          document.title = `(${messageCount}) New Messages`;
-          isApp = false;
-        }
+      setInterval(() => {
+        document.title =
+          document.title === "App" ? `(${messageCount}) New Messages` : "App";
       }, 1000);
     </script>
   </body>

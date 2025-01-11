@@ -1,0 +1,29 @@
+<!-- Exercise for Lesson 12o -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 12o</title>
+  </head>
+  <body>
+    <script>
+      function removeFirstTwoEggs(foods) {
+        let eggCount = 0;
+        const returnArray = foods.filter((value) => {
+          if (value === "egg" && eggCount < 2) {
+            eggCount++;
+            return false;
+          }
+          return true;
+        });
+        return returnArray;
+      }
+
+      const foodArray = ["egg", "apple", "egg", "egg", "ham"];
+      console.log(foodArray);
+      console.log(removeFirstTwoEggs(foodArray));
+    </script>
+  </body>
+</html>

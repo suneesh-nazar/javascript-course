@@ -9,18 +9,22 @@
   </head>
   <body>
     <div>
-      <button onclick="displayMessage();">Add to cart</button>
+      <button class="js-add-button">Add to cart</button>
       <p class="js-message"></p>
     </div>
 
     <script>
+      document.querySelector(".js-add-button").addEventListener("click", () => {
+        displayMessage();
+      });
+
       let timeOutId;
       function displayMessage() {
         clearTimeout(timeOutId);
         const messageElement = document.querySelector(".js-message");
         messageElement.innerHTML = "Added";
 
-        timeOutId = setTimeout(function () {
+        timeOutId = setTimeout(() => {
           messageElement.innerHTML = "";
         }, 2000);
       }

@@ -1,0 +1,27 @@
+<!-- Exercise for Lesson 12l -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 12l</title>
+  </head>
+  <body>
+    <script>
+      function countPositive(array) {
+        let positiveNumbers = 0;
+        array.forEach((value) => {
+          if (value > 0) {
+            positiveNumbers++;
+          }
+        });
+        return positiveNumbers;
+      }
+      const numArray = [1, -3, 5];
+      console.log(numArray);
+      console.log(countPositive(numArray));
+      console.log(countPositive([-2, 3, -5, 7, 10]));
+    </script>
+  </body>
+</html>

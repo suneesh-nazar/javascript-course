@@ -8,9 +8,19 @@
     <title>Exercise 12i</title>
   </head>
   <body>
-    <button onclick="addMessage();">Add</button>
-    <button onclick="removeMessage();">Remove</button>
+    <button class="js-add-button">Add</button>
+    <button class="js-remove-button">Remove</button>
     <script>
+      document.querySelector(".js-add-button").addEventListener("click", () => {
+        addMessage();
+      });
+
+      document
+        .querySelector(".js-remove-button")
+        .addEventListener("click", () => {
+          removeMessage();
+        });
+
       let messageCount = 2;
       let inetrvalId;
       let notificationDisplaying;
@@ -21,12 +31,9 @@
           return;
         }
 
-        inetrvalId = setInterval(function () {
-          if (document.title === "App") {
-            document.title = `(${messageCount}) New Messages`;
-          } else {
-            document.title = "App";
-          }
+        inetrvalId = setInterval(() => {
+          document.title =
+            document.title === "App" ? `(${messageCount}) New Messages` : "App";
         }, 1000);
 
         notificationDisplaying = true;
@@ -45,8 +52,9 @@
 
       function removeMessage() {
         messageCount--;
-        if (messageCount === 0) {
+        if (messageCount <= 0) {
           stopNotification();
+          messageCount = 0;
         }
       }
     </script>
