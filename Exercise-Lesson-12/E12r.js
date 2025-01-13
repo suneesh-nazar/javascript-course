@@ -132,12 +132,12 @@ function playGame(playerMove) {
 
   // document.querySelector(
   //   ".js-moves"
-  // ).innerHTML = `You picked <img src="images/${playerMove}-emoji.png" alt="Rock" class="move-icon" /> Computer picked <img src="images/${computerMove}-emoji.png" alt="Paper" class="move-icon" />`;
+  // ).innerHTML = `You picked <img src="/images/${playerMove}-emoji.png" alt="Rock" class="move-icon" /> Computer picked <img src="/images/${computerMove}-emoji.png" alt="Paper" class="move-icon" />`;
 
   document.querySelector(
     ".js-moves"
-  ).innerHTML = `You <img src="images/${playerMove}-emoji.png" alt="Rock" class="move-icon" />
-<img src="images/${computerMove}-emoji.png" alt="Paper" class="move-icon" />
+  ).innerHTML = `You <img src="/images/${playerMove}-emoji.png" alt="Rock" class="move-icon" />
+<img src="/images/${computerMove}-emoji.png" alt="Paper" class="move-icon" />
 Computer`;
 }
 
