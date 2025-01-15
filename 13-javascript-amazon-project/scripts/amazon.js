@@ -46,7 +46,7 @@ products.forEach ((product) => {
 
     <div class="product-spacer"></div>
 
-    <div class="added-to-cart">
+    <div class="added-to-cart js-added-to-cart-${product.id}">
       <img src="images/icons/checkmark.png" />
       Added
     </div>
@@ -63,8 +63,9 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML;
 
 // ====== Adding items to cart - Begin ======
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+  let addedMessageTimeoutId;
   button.addEventListener('click', () => {
-    const productId = button.dataset.productId;
+    const {productId} = button.dataset;
 
     let matchingItem;
 
@@ -74,21 +75,37 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
       }
     });
 
+    const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
+    const quantity = Number(quantitySelector.value);
+
     if (matchingItem) {
-      matchingItem.quantity += Number(document.querySelector(`.js-quantity-selector-${productId}`).value);
+      matchingItem.quantity += quantity;
     } else {
-      cart.push({
-        productId: productId,
-        quantity: Number(document.querySelector(`.js-quantity-selector-${productId}`).value)
-      });
+      cart.push({ productId, quantity });
     }
 
-    // ====== Displaying the total Cart quantity in the landing page - Begin ======
+    // ====== Displaying the total Cart quantity - Begin ======
     let cartQuantity = 0;
     cart.forEach(item => cartQuantity += item.quantity );
 
     document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
-    // ====== Displaying the total Cart quantity in the landing page - End ======
+    // ====== Displaying the total Cart quantity - End ======
+
+    // ====== Displaying the Added message - Begin ======
+    const addedMessageElement = document.querySelector(`.js-added-to-cart-${productId}`);
+    addedMessageElement.classList.add('added-to-cart-visible');
+
+    setTimeout(() => {
+      if (addedMessageTimeoutId) {
+        clearTimeout(addedMessageTimeoutId);
+      }
+      const timeoutId = setTimeout(() => {
+        addedMessageElement.classList.remove('added-to-cart-visible');
+      }, 2000);
+
+      addedMessageTimeoutId = timeoutId;
+    });
+    // ====== Displaying the Added message - End ======
   });
 });
 // ====== Adding items to cart - End ======
